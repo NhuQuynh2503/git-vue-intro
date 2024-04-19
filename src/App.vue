@@ -41,12 +41,12 @@
             </div>
             <div class="right">
                 <p>Hosted by</p>
-                <h4>Nguyen Ngoc Nhu Quynh</h4>
+                <h4>{{person.name}}</h4>
                 <div class="icons">
-                    <a href=""><Icon icon="line-md:phone"></Icon>+8439900****</a>
-                    <a href=""><Icon icon="line-md:email-twotone-alt"></Icon>nnnhuquynh03@gmail.com</a>
-                    <a href=""><Icon icon="line-md:my-location"></Icon>Tam Kỳ- Quảng Nam</a>
-                    <a href=""><Icon icon="line-md:facebook"></Icon>https://www.facebook-0123.com/</a>
+                    <a href=""><Icon icon="line-md:phone"></Icon>{{ person.phone }}</a>
+                    <a href=""><Icon icon="line-md:email-twotone-alt"></Icon>{{ person.email }}</a>
+                    <a href=""><Icon icon="line-md:my-location"></Icon>{{ person.location }}</a>
+                    <a href=""><Icon icon="line-md:facebook"></Icon>{{ person.facebook }}</a>
                 </div>
                 <div class="intro-container">
                     <div class="intro_1">
@@ -122,6 +122,19 @@
     </div>
 </template>
 <script setup>
+import {ref} from "vue"
+const person=ref({
+    name:"Nguyễn Ngọc Như Quỳnh",
+    phone:"+8439900****",
+    email:"nnnhuquynh03@gmail.com",
+    location:"Tam Kỳ- Quảng Nam",
+    facebook:"https://www.facebook-0123.com/"
+})
+
+
+
+
+
 
 </script>
 
